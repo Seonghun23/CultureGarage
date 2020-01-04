@@ -17,7 +17,7 @@
 		1450766D23C0946900AAB507 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 1450766C23C0946900AAB507 /* RxBlocking */; };
 		1450767123C094DA00AAB507 /* TMDB_API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1450767023C094DA00AAB507 /* TMDB_API.swift */; };
 		1450767A23C0968B00AAB507 /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1450767923C0968B00AAB507 /* RxAlamofire */; };
-		1450767C23C098CB00AAB507 /* TMDB_Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1450767B23C098CB00AAB507 /* TMDB_Key.swift */; };
+		1450767C23C098CB00AAB507 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1450767B23C098CB00AAB507 /* Key.swift */; };
 		1450767F23C098FC00AAB507 /* MovieAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1450767E23C098FC00AAB507 /* MovieAPI.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +39,7 @@
 		1450765423C0940900AAB507 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		1450765623C0940900AAB507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1450767023C094DA00AAB507 /* TMDB_API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDB_API.swift; sourceTree = "<group>"; };
-		1450767B23C098CB00AAB507 /* TMDB_Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDB_Key.swift; sourceTree = "<group>"; };
+		1450767B23C098CB00AAB507 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		1450767E23C098FC00AAB507 /* MovieAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				1450767023C094DA00AAB507 /* TMDB_API.swift */,
-				1450767B23C098CB00AAB507 /* TMDB_Key.swift */,
+				1450767B23C098CB00AAB507 /* Key.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -256,7 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1450767F23C098FC00AAB507 /* MovieAPI.swift in Sources */,
-				1450767C23C098CB00AAB507 /* TMDB_Key.swift in Sources */,
+				1450767C23C098CB00AAB507 /* Key.swift in Sources */,
 				1450767123C094DA00AAB507 /* TMDB_API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
