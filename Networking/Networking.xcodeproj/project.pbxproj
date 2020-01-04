@@ -88,7 +88,6 @@
 			isa = PBXGroup;
 			children = (
 				1450767D23C098E600AAB507 /* API */,
-				1450766E23C094C800AAB507 /* TMDB */,
 				1450764923C0940900AAB507 /* Networking.h */,
 				1450764A23C0940900AAB507 /* Info.plist */,
 			);
@@ -104,25 +103,10 @@
 			path = NetworkingTests;
 			sourceTree = "<group>";
 		};
-		1450766E23C094C800AAB507 /* TMDB */ = {
-			isa = PBXGroup;
-			children = (
-				1450766F23C094D000AAB507 /* API */,
-			);
-			path = TMDB;
-			sourceTree = "<group>";
-		};
-		1450766F23C094D000AAB507 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				1450767023C094DA00AAB507 /* TMDB_API.swift */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
 		1450767D23C098E600AAB507 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				1450767023C094DA00AAB507 /* TMDB_API.swift */,
 				1450767E23C098FC00AAB507 /* MovieAPI.swift */,
 			);
 			path = API;
@@ -328,6 +312,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MACH_O_TYPE = mh_dylib;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -385,6 +370,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MACH_O_TYPE = mh_dylib;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -416,9 +402,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Seonghun-Kim.Networking";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -442,8 +429,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Seonghun-Kim.Networking";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
