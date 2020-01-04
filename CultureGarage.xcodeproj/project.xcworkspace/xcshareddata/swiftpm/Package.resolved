@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CGNetwork",
+        "repositoryURL": "https://github.com/Seonghun23/CGNetwork",
+        "state": {
+          "branch": null,
+          "revision": "9f9bd1c0e6cf1b57cdc45f1ea0643525920c1ceb",
+          "version": "0.0.0"
+        }
+      },
+      {
+        "package": "RxSwift",
+        "repositoryURL": "https://github.com/ReactiveX/RxSwift",
+        "state": {
+          "branch": null,
+          "revision": "b3e888b4972d9bc76495dd74d30a8c7fad4b9395",
+          "version": "5.0.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
