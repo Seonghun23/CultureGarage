@@ -88,9 +88,3 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
-
-# TMDB API Key
-# 
-# It's for hide private TMDB API Key
-
-Networking/Networking/TMDB/API/TMDB_Key.swift
