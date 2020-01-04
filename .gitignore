@@ -93,3 +93,5 @@ iOSInjectionProject/
 # 
 # It's for hide private TMDB API Key
 
+Networking/Networking/TMDB/API/TMDB_Key.swift
+
