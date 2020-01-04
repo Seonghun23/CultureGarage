@@ -10,7 +10,6 @@
 		140A553D23C050260019BBAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140A553C23C050260019BBAD /* AppDelegate.swift */; };
 		140A553F23C050260019BBAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140A553E23C050260019BBAD /* SceneDelegate.swift */; };
 		140A554123C050260019BBAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140A554023C050260019BBAD /* ViewController.swift */; };
-		140A554723C050260019BBAD /* CultureGarage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 140A554523C050260019BBAD /* CultureGarage.xcdatamodeld */; };
 		140A554923C050280019BBAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 140A554823C050280019BBAD /* Assets.xcassets */; };
 		140A554C23C050280019BBAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 140A554A23C050280019BBAD /* LaunchScreen.storyboard */; };
 		140A555723C050280019BBAD /* CultureGarageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140A555623C050280019BBAD /* CultureGarageTests.swift */; };
@@ -20,8 +19,12 @@
 		140A556C23C050590019BBAD /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 140A556B23C050590019BBAD /* RxBlocking */; };
 		140A556F23C050680019BBAD /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 140A556E23C050680019BBAD /* RxTest */; };
 		140A557123C051080019BBAD /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 140A557023C051080019BBAD /* RxBlocking */; };
-		145074B523C0560000AAB507 /* UserDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145074B423C0560000AAB507 /* UserDatabase.swift */; };
-		145074E323C0618300AAB507 /* CGNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 145074E223C0618300AAB507 /* CGNetwork */; };
+		1450763423C091EE00AAB507 /* Database.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1450763323C091EE00AAB507 /* Database.framework */; };
+		1450763523C091EE00AAB507 /* Database.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1450763323C091EE00AAB507 /* Database.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1450763A23C091F600AAB507 /* Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1450763923C091F600AAB507 /* Resources.framework */; };
+		1450763B23C091F600AAB507 /* Resources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1450763923C091F600AAB507 /* Resources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1450766123C0942600AAB507 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1450766023C0942600AAB507 /* Networking.framework */; };
+		1450766223C0942600AAB507 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1450766023C0942600AAB507 /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +37,27 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1450762C23C091DB00AAB507 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1450763523C091EE00AAB507 /* Database.framework in Embed Frameworks */,
+				1450763B23C091F600AAB507 /* Resources.framework in Embed Frameworks */,
+				1450766223C0942600AAB507 /* Networking.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		140A553923C050260019BBAD /* CultureGarage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CultureGarage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		140A553C23C050260019BBAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		140A553E23C050260019BBAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		140A554023C050260019BBAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		140A554623C050260019BBAD /* CultureGarage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CultureGarage.xcdatamodel; sourceTree = "<group>"; };
 		140A554823C050280019BBAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		140A554B23C050280019BBAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		140A554D23C050280019BBAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,7 +65,9 @@
 		140A555623C050280019BBAD /* CultureGarageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureGarageTests.swift; sourceTree = "<group>"; };
 		140A555823C050280019BBAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		140A556123C050310019BBAD /* CultureGarage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CultureGarage.entitlements; sourceTree = "<group>"; };
-		145074B423C0560000AAB507 /* UserDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDatabase.swift; sourceTree = "<group>"; };
+		1450763323C091EE00AAB507 /* Database.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Database.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1450763923C091F600AAB507 /* Resources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Resources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1450766023C0942600AAB507 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +76,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				140A556823C050590019BBAD /* RxRelay in Frameworks */,
+				1450763423C091EE00AAB507 /* Database.framework in Frameworks */,
+				1450763A23C091F600AAB507 /* Resources.framework in Frameworks */,
 				140A556A23C050590019BBAD /* RxCocoa in Frameworks */,
-				145074E323C0618300AAB507 /* CGNetwork in Frameworks */,
 				140A556423C050590019BBAD /* RxSwift in Frameworks */,
 				140A556C23C050590019BBAD /* RxBlocking in Frameworks */,
+				1450766123C0942600AAB507 /* Networking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +122,6 @@
 				140A556123C050310019BBAD /* CultureGarage.entitlements */,
 				140A553C23C050260019BBAD /* AppDelegate.swift */,
 				140A553E23C050260019BBAD /* SceneDelegate.swift */,
-				145074B323C055BD00AAB507 /* Database */,
 				145074B223C0551200AAB507 /* ViewController */,
 				140A554823C050280019BBAD /* Assets.xcassets */,
 				140A554A23C050280019BBAD /* LaunchScreen.storyboard */,
@@ -121,6 +142,9 @@
 		140A556D23C050680019BBAD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1450766023C0942600AAB507 /* Networking.framework */,
+				1450763923C091F600AAB507 /* Resources.framework */,
+				1450763323C091EE00AAB507 /* Database.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -133,23 +157,6 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		145074B323C055BD00AAB507 /* Database */ = {
-			isa = PBXGroup;
-			children = (
-				140A554523C050260019BBAD /* CultureGarage.xcdatamodeld */,
-				145074B423C0560000AAB507 /* UserDatabase.swift */,
-				145074B723C0599500AAB507 /* DatabaseTests */,
-			);
-			path = Database;
-			sourceTree = "<group>";
-		};
-		145074B723C0599500AAB507 /* DatabaseTests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DatabaseTests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,6 +167,7 @@
 				140A553523C050260019BBAD /* Sources */,
 				140A553623C050260019BBAD /* Frameworks */,
 				140A553723C050260019BBAD /* Resources */,
+				1450762C23C091DB00AAB507 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -171,7 +179,6 @@
 				140A556723C050590019BBAD /* RxRelay */,
 				140A556923C050590019BBAD /* RxCocoa */,
 				140A556B23C050590019BBAD /* RxBlocking */,
-				145074E223C0618300AAB507 /* CGNetwork */,
 			);
 			productName = CultureGarage;
 			productReference = 140A553923C050260019BBAD /* CultureGarage.app */;
@@ -229,7 +236,6 @@
 			mainGroup = 140A553023C050260019BBAD;
 			packageReferences = (
 				140A556223C050590019BBAD /* XCRemoteSwiftPackageReference "RxSwift" */,
-				145074E123C0618300AAB507 /* XCRemoteSwiftPackageReference "CGNetwork" */,
 			);
 			productRefGroup = 140A553A23C050260019BBAD /* Products */;
 			projectDirPath = "";
@@ -266,10 +272,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				140A554123C050260019BBAD /* ViewController.swift in Sources */,
-				140A554723C050260019BBAD /* CultureGarage.xcdatamodeld in Sources */,
 				140A553D23C050260019BBAD /* AppDelegate.swift in Sources */,
 				140A553F23C050260019BBAD /* SceneDelegate.swift in Sources */,
-				145074B523C0560000AAB507 /* UserDatabase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,14 +548,6 @@
 				minimumVersion = 5.0.1;
 			};
 		};
-		145074E123C0618300AAB507 /* XCRemoteSwiftPackageReference "CGNetwork" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Seonghun23/CGNetwork";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -585,25 +581,7 @@
 			package = 140A556223C050590019BBAD /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxBlocking;
 		};
-		145074E223C0618300AAB507 /* CGNetwork */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 145074E123C0618300AAB507 /* XCRemoteSwiftPackageReference "CGNetwork" */;
-			productName = CGNetwork;
-		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		140A554523C050260019BBAD /* CultureGarage.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				140A554623C050260019BBAD /* CultureGarage.xcdatamodel */,
-			);
-			currentVersion = 140A554623C050260019BBAD /* CultureGarage.xcdatamodel */;
-			path = CultureGarage.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 140A553123C050260019BBAD /* Project object */;
 }

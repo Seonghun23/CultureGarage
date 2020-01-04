@@ -1,6 +1,6 @@
 //
-//  UserDatabase.swift
-//  CultureGarage
+//  Database.swift
+//  Database
 //
 //  Created by Seonghun Kim on 2020/01/04.
 //  Copyright © 2020 Seonghun Kim. All rights reserved.
@@ -9,7 +9,9 @@
 import Foundation
 import CoreData
 
-class UserDatabase {
+public class UserDatabase {
+    
+    public init() {}
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentCloudKitContainer = {
@@ -19,7 +21,7 @@ class UserDatabase {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentCloudKitContainer(name: "CultureGarage")
+        let container = NSPersistentCloudKitContainer(name: "Database")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
@@ -41,7 +43,7 @@ class UserDatabase {
 
     // MARK: - Core Data Saving support
 
-    func saveContext () {
+    public func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
             do {
