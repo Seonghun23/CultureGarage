@@ -118,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				1450767023C094DA00AAB507 /* TMDB_API.swift */,
-				1450768023C09E0E00AAB507 /* Key */,
+				1450767B23C098CB00AAB507 /* TMDB_Key.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -129,14 +129,6 @@
 				1450767E23C098FC00AAB507 /* MovieAPI.swift */,
 			);
 			path = API;
-			sourceTree = "<group>";
-		};
-		1450768023C09E0E00AAB507 /* Key */ = {
-			isa = PBXGroup;
-			children = (
-				1450767B23C098CB00AAB507 /* TMDB_Key.swift */,
-			);
-			path = Key;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
