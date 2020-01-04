@@ -123,9 +123,9 @@
 				140A553C23C050260019BBAD /* AppDelegate.swift */,
 				140A553E23C050260019BBAD /* SceneDelegate.swift */,
 				145074B223C0551200AAB507 /* ViewController */,
+				140A554D23C050280019BBAD /* Info.plist */,
 				140A554823C050280019BBAD /* Assets.xcassets */,
 				140A554A23C050280019BBAD /* LaunchScreen.storyboard */,
-				140A554D23C050280019BBAD /* Info.plist */,
 			);
 			path = CultureGarage;
 			sourceTree = "<group>";
@@ -426,8 +426,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CultureGarage/CultureGarage.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 79JAW5V2W8;
 				INFOPLIST_FILE = CultureGarage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -436,9 +436,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Seonghun-Kim.CultureGarage";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -447,8 +447,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CultureGarage/CultureGarage.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 79JAW5V2W8;
 				INFOPLIST_FILE = CultureGarage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -457,9 +457,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Seonghun-Kim.CultureGarage";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

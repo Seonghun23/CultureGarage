@@ -7,7 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
-class MovieAPI {
-    
+public class MovieAPI {
 }

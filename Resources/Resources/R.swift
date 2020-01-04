@@ -1,5 +1,5 @@
 //
-//  Color.swift
+//  R.swift
 //  Resources
 //
 //  Created by Seonghun Kim on 2020/01/04.
@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+public class R {
+    static let bundle = Bundle(for: R.self)
+}

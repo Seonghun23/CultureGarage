@@ -15,7 +15,7 @@
 		1450760723C08CCC00AAB507 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 1450760623C08CCC00AAB507 /* RxRelay */; };
 		1450760923C08CCC00AAB507 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 1450760823C08CCC00AAB507 /* RxCocoa */; };
 		1450760B23C08CCC00AAB507 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 1450760A23C08CCC00AAB507 /* RxBlocking */; };
-		1450761B23C08D3D00AAB507 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1450761923C08D3D00AAB507 /* Database.xcdatamodeld */; };
+		1450761B23C08D3D00AAB507 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1450761923C08D3D00AAB507 /* Model.xcdatamodeld */; };
 		1450761D23C08D5E00AAB507 /* UserDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1450761C23C08D5E00AAB507 /* UserDatabase.swift */; };
 /* End PBXBuildFile section */
 
@@ -86,8 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				1450761823C08D1E00AAB507 /* CoreData */,
-				145075E723C08B2A00AAB507 /* Database.h */,
 				145075E823C08B2A00AAB507 /* Info.plist */,
+				145075E723C08B2A00AAB507 /* Database.h */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -104,7 +104,7 @@
 		1450761823C08D1E00AAB507 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				1450761923C08D3D00AAB507 /* Database.xcdatamodeld */,
+				1450761923C08D3D00AAB507 /* Model.xcdatamodeld */,
 				1450761C23C08D5E00AAB507 /* UserDatabase.swift */,
 			);
 			path = CoreData;
@@ -233,7 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1450761D23C08D5E00AAB507 /* UserDatabase.swift in Sources */,
-				1450761B23C08D3D00AAB507 /* Database.xcdatamodeld in Sources */,
+				1450761B23C08D3D00AAB507 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,13 +539,13 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		1450761923C08D3D00AAB507 /* Database.xcdatamodeld */ = {
+		1450761923C08D3D00AAB507 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				1450761A23C08D3D00AAB507 /* Database.xcdatamodel */,
 			);
 			currentVersion = 1450761A23C08D3D00AAB507 /* Database.xcdatamodel */;
-			path = Database.xcdatamodeld;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
