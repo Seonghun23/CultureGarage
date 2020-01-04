@@ -20,6 +20,8 @@
 		140A556C23C050590019BBAD /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 140A556B23C050590019BBAD /* RxBlocking */; };
 		140A556F23C050680019BBAD /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 140A556E23C050680019BBAD /* RxTest */; };
 		140A557123C051080019BBAD /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 140A557023C051080019BBAD /* RxBlocking */; };
+		145074B523C0560000AAB507 /* UserDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145074B423C0560000AAB507 /* UserDatabase.swift */; };
+		145074E323C0618300AAB507 /* CGNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 145074E223C0618300AAB507 /* CGNetwork */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,7 @@
 		140A555623C050280019BBAD /* CultureGarageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureGarageTests.swift; sourceTree = "<group>"; };
 		140A555823C050280019BBAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		140A556123C050310019BBAD /* CultureGarage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CultureGarage.entitlements; sourceTree = "<group>"; };
+		145074B423C0560000AAB507 /* UserDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDatabase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +57,7 @@
 			files = (
 				140A556823C050590019BBAD /* RxRelay in Frameworks */,
 				140A556A23C050590019BBAD /* RxCocoa in Frameworks */,
+				145074E323C0618300AAB507 /* CGNetwork in Frameworks */,
 				140A556423C050590019BBAD /* RxSwift in Frameworks */,
 				140A556C23C050590019BBAD /* RxBlocking in Frameworks */,
 			);
@@ -96,11 +100,11 @@
 				140A556123C050310019BBAD /* CultureGarage.entitlements */,
 				140A553C23C050260019BBAD /* AppDelegate.swift */,
 				140A553E23C050260019BBAD /* SceneDelegate.swift */,
-				140A554023C050260019BBAD /* ViewController.swift */,
+				145074B323C055BD00AAB507 /* Database */,
+				145074B223C0551200AAB507 /* ViewController */,
 				140A554823C050280019BBAD /* Assets.xcassets */,
 				140A554A23C050280019BBAD /* LaunchScreen.storyboard */,
 				140A554D23C050280019BBAD /* Info.plist */,
-				140A554523C050260019BBAD /* CultureGarage.xcdatamodeld */,
 			);
 			path = CultureGarage;
 			sourceTree = "<group>";
@@ -119,6 +123,31 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		145074B223C0551200AAB507 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				140A554023C050260019BBAD /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		145074B323C055BD00AAB507 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				140A554523C050260019BBAD /* CultureGarage.xcdatamodeld */,
+				145074B423C0560000AAB507 /* UserDatabase.swift */,
+				145074B723C0599500AAB507 /* DatabaseTests */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		145074B723C0599500AAB507 /* DatabaseTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DatabaseTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +171,7 @@
 				140A556723C050590019BBAD /* RxRelay */,
 				140A556923C050590019BBAD /* RxCocoa */,
 				140A556B23C050590019BBAD /* RxBlocking */,
+				145074E223C0618300AAB507 /* CGNetwork */,
 			);
 			productName = CultureGarage;
 			productReference = 140A553923C050260019BBAD /* CultureGarage.app */;
@@ -199,6 +229,7 @@
 			mainGroup = 140A553023C050260019BBAD;
 			packageReferences = (
 				140A556223C050590019BBAD /* XCRemoteSwiftPackageReference "RxSwift" */,
+				145074E123C0618300AAB507 /* XCRemoteSwiftPackageReference "CGNetwork" */,
 			);
 			productRefGroup = 140A553A23C050260019BBAD /* Products */;
 			projectDirPath = "";
@@ -238,6 +269,7 @@
 				140A554723C050260019BBAD /* CultureGarage.xcdatamodeld in Sources */,
 				140A553D23C050260019BBAD /* AppDelegate.swift in Sources */,
 				140A553F23C050260019BBAD /* SceneDelegate.swift in Sources */,
+				145074B523C0560000AAB507 /* UserDatabase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +544,14 @@
 				minimumVersion = 5.0.1;
 			};
 		};
+		145074E123C0618300AAB507 /* XCRemoteSwiftPackageReference "CGNetwork" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Seonghun23/CGNetwork";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -544,6 +584,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 140A556223C050590019BBAD /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxBlocking;
+		};
+		145074E223C0618300AAB507 /* CGNetwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 145074E123C0618300AAB507 /* XCRemoteSwiftPackageReference "CGNetwork" */;
+			productName = CGNetwork;
 		};
 /* End XCSwiftPackageProductDependency section */
 
