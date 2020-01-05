@@ -11,8 +11,8 @@
 		148BC6ED23C0F045004B63CA /* TMDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148BC6EC23C0F045004B63CA /* TMDBTests.swift */; };
 		148BC6EF23C0F045004B63CA /* TMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 148BC6E123C0F045004B63CA /* TMDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		148BC70223C0F056004B63CA /* MovieAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148BC70123C0F056004B63CA /* MovieAPI.swift */; };
-		148BC73423C1E16F004B63CA /* Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148BC73323C1E16F004B63CA /* Url.swift */; };
-		148BC73623C1E178004B63CA /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148BC73523C1E178004B63CA /* Key.swift */; };
+		148BC73423C1E16F004B63CA /* URL_Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148BC73323C1E16F004B63CA /* URL_Path.swift */; };
+		148BC73623C1E178004B63CA /* API_Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148BC73523C1E178004B63CA /* API_Key.swift */; };
 		148BC73823C1E200004B63CA /* ImageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148BC73723C1E200004B63CA /* ImageAPI.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,8 +34,8 @@
 		148BC6EC23C0F045004B63CA /* TMDBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBTests.swift; sourceTree = "<group>"; };
 		148BC6EE23C0F045004B63CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		148BC70123C0F056004B63CA /* MovieAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPI.swift; sourceTree = "<group>"; };
-		148BC73323C1E16F004B63CA /* Url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Url.swift; sourceTree = "<group>"; };
-		148BC73523C1E178004B63CA /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		148BC73323C1E16F004B63CA /* URL_Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL_Path.swift; sourceTree = "<group>"; };
+		148BC73523C1E178004B63CA /* API_Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_Key.swift; sourceTree = "<group>"; };
 		148BC73723C1E200004B63CA /* ImageAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,8 +100,8 @@
 			children = (
 				148BC70123C0F056004B63CA /* MovieAPI.swift */,
 				148BC73723C1E200004B63CA /* ImageAPI.swift */,
-				148BC73323C1E16F004B63CA /* Url.swift */,
-				148BC73523C1E178004B63CA /* Key.swift */,
+				148BC73323C1E16F004B63CA /* URL_Path.swift */,
+				148BC73523C1E178004B63CA /* API_Key.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -223,9 +223,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				148BC70223C0F056004B63CA /* MovieAPI.swift in Sources */,
-				148BC73423C1E16F004B63CA /* Url.swift in Sources */,
+				148BC73423C1E16F004B63CA /* URL_Path.swift in Sources */,
 				148BC73823C1E200004B63CA /* ImageAPI.swift in Sources */,
-				148BC73623C1E178004B63CA /* Key.swift in Sources */,
+				148BC73623C1E178004B63CA /* API_Key.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

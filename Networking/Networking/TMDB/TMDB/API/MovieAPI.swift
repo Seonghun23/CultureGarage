@@ -8,7 +8,7 @@
 
 import Foundation
 
-public final struct MovieAPI {
+public struct MovieAPI {
     private enum Endpoint {
         static let search = "/search/movie"
     }
@@ -33,7 +33,7 @@ public final struct MovieAPI {
     private func makeSearchRequest(with title: String) -> URLRequest? {
         guard !title.isEmpty else { return nil }
         
-        let urlString = Url.api + Endpoint.search
+        let urlString = URL_Path.api + Endpoint.search
         guard let url = URL(string: urlString) else {
             assert(false, urlString + "is not URL")
             return nil
@@ -41,7 +41,7 @@ public final struct MovieAPI {
         
         var request = URLRequest(url: url)
         
-        let keyQueryItem = URLQueryItem(name: "api_key", value: Key.v3)
+        let keyQueryItem = URLQueryItem(name: "api_key", value: API_Key.v3)
         let titleQueryItem = URLQueryItem(name: "query", value: title)
         
         guard let urlComponents = NSURLComponents(url: url, resolvingAgainstBaseURL: false) else {
