@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		148BC6E823C0F045004B63CA /* TMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 148BC6DE23C0F045004B63CA /* TMDB.framework */; };
-		148BC6ED23C0F045004B63CA /* TMDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148BC6EC23C0F045004B63CA /* TMDBTests.swift */; };
 		148BC6EF23C0F045004B63CA /* TMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 148BC6E123C0F045004B63CA /* TMDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		148BC70223C0F056004B63CA /* MovieAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148BC70123C0F056004B63CA /* MovieAPI.swift */; };
 		148BC73423C1E16F004B63CA /* URL_Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148BC73323C1E16F004B63CA /* URL_Path.swift */; };
-		148BC73623C1E178004B63CA /* API_Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148BC73523C1E178004B63CA /* API_Key.swift */; };
+		148BC73623C1E178004B63CA /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148BC73523C1E178004B63CA /* Key.swift */; };
 		148BC73823C1E200004B63CA /* ImageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148BC73723C1E200004B63CA /* ImageAPI.swift */; };
+		148BC74823C2C001004B63CA /* MovieAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148BC74723C2C001004B63CA /* MovieAPITests.swift */; };
+		148BC74A23C2C025004B63CA /* ImageAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148BC74923C2C025004B63CA /* ImageAPITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,12 +32,13 @@
 		148BC6E123C0F045004B63CA /* TMDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMDB.h; sourceTree = "<group>"; };
 		148BC6E223C0F045004B63CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		148BC6E723C0F045004B63CA /* TMDBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMDBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		148BC6EC23C0F045004B63CA /* TMDBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBTests.swift; sourceTree = "<group>"; };
 		148BC6EE23C0F045004B63CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		148BC70123C0F056004B63CA /* MovieAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPI.swift; sourceTree = "<group>"; };
 		148BC73323C1E16F004B63CA /* URL_Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL_Path.swift; sourceTree = "<group>"; };
-		148BC73523C1E178004B63CA /* API_Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_Key.swift; sourceTree = "<group>"; };
+		148BC73523C1E178004B63CA /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		148BC73723C1E200004B63CA /* ImageAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAPI.swift; sourceTree = "<group>"; };
+		148BC74723C2C001004B63CA /* MovieAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPITests.swift; sourceTree = "<group>"; };
+		148BC74923C2C025004B63CA /* ImageAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAPITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +91,8 @@
 		148BC6EB23C0F045004B63CA /* TMDBTests */ = {
 			isa = PBXGroup;
 			children = (
-				148BC6EC23C0F045004B63CA /* TMDBTests.swift */,
+				148BC74723C2C001004B63CA /* MovieAPITests.swift */,
+				148BC74923C2C025004B63CA /* ImageAPITests.swift */,
 				148BC6EE23C0F045004B63CA /* Info.plist */,
 			);
 			path = TMDBTests;
@@ -101,7 +104,7 @@
 				148BC70123C0F056004B63CA /* MovieAPI.swift */,
 				148BC73723C1E200004B63CA /* ImageAPI.swift */,
 				148BC73323C1E16F004B63CA /* URL_Path.swift */,
-				148BC73523C1E178004B63CA /* API_Key.swift */,
+				148BC73523C1E178004B63CA /* Key.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -225,7 +228,7 @@
 				148BC70223C0F056004B63CA /* MovieAPI.swift in Sources */,
 				148BC73423C1E16F004B63CA /* URL_Path.swift in Sources */,
 				148BC73823C1E200004B63CA /* ImageAPI.swift in Sources */,
-				148BC73623C1E178004B63CA /* API_Key.swift in Sources */,
+				148BC73623C1E178004B63CA /* Key.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,7 +236,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				148BC6ED23C0F045004B63CA /* TMDBTests.swift in Sources */,
+				148BC74A23C2C025004B63CA /* ImageAPITests.swift in Sources */,
+				148BC74823C2C001004B63CA /* MovieAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +255,7 @@
 		148BC6F023C0F045004B63CA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -373,6 +378,7 @@
 		148BC6F323C0F045004B63CA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -400,6 +406,7 @@
 		148BC6F423C0F045004B63CA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -427,6 +434,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULE_DEBUGGING = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79JAW5V2W8;
 				INFOPLIST_FILE = TMDBTests/Info.plist;
@@ -446,6 +454,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULE_DEBUGGING = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79JAW5V2W8;
 				INFOPLIST_FILE = TMDBTests/Info.plist;

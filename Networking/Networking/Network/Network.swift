@@ -7,16 +7,32 @@
 //
 
 import Foundation
-//import Alamofire
-//import RxAlamofire
+import Alamofire
+import RxAlamofire
 import RxSwift
 
 final class Network<T: Decodable> {
-    private let endPoint: String
     private let scheduler: ConcurrentDispatchQueueScheduler
-
-    init(_ endPoint: String) {
-        self.endPoint = endPoint
-        self.scheduler = ConcurrentDispatchQueueScheduler(qos: DispatchQoS(qosClass: DispatchQoS.QoSClass.background, relativePriority: 1))
+    private let sessionManager: SessionManager
+    
+    init(sessionManager: SessionManager) {
+        let dispatchQos = DispatchQoS(
+            qosClass: DispatchQoS.QoSClass.background,
+            relativePriority: 1
+        )
+        
+        self.scheduler = ConcurrentDispatchQueueScheduler(qos: dispatchQos)
+        self.sessionManager = sessionManager
+    }
+    
+    func getItems(_ request: URLRequest) -> Observable<[T]> {
+        return sessionManager.rx
+            .request(urlRequest: request)
+            .data()
+            .debug()
+            .observeOn(scheduler)
+            .map({ data -> [T] in
+                return try JSONDecoder().decode([T].self, from: data)
+            })
     }
 }

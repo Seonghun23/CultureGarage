@@ -18,19 +18,30 @@ public struct MovieAPI {
     }
     
     public enum RequestType {
-        case search(String)
+        case search(String, Int)
     }
     
-    public init() {}
+    private let apiKey: String
+    private let urlPath: String
+    
+    public init() {
+        self.apiKey = Key.v3
+        self.urlPath = URL_Path.api
+    }
+    
+    init(apiKey: String, urlPath: String) {
+        self.apiKey = apiKey
+        self.urlPath = urlPath
+    }
     
     public func getRequest(for type: RequestType) -> URLRequest? {
         switch type {
-        case let .search(title):
-            return makeSearchRequest(with: title)
+        case let .search(title, page):
+            return makeSearchRequest(with: title, at: page)
         }
     }
     
-    private func makeSearchRequest(with title: String) -> URLRequest? {
+    private func makeSearchRequest(with title: String, at page: Int) -> URLRequest? {
         guard !title.isEmpty else { return nil }
         
         let urlString = URL_Path.api + Endpoint.search
@@ -41,24 +52,22 @@ public struct MovieAPI {
         
         var request = URLRequest(url: url)
         
-        let keyQueryItem = URLQueryItem(name: "api_key", value: API_Key.v3)
+        let keyQueryItem = URLQueryItem(name: "api_key", value: apiKey)
         let titleQueryItem = URLQueryItem(name: "query", value: title)
+        let pageQueryItem = URLQueryItem(name: "page", value: "\(page)")
+        let adultQueryItem = URLQueryItem(name: "page", value: "true")
         
         guard let urlComponents = NSURLComponents(url: url, resolvingAgainstBaseURL: false) else {
             assert(false, "Failure create NSURLComponents from \(url)")
             return nil
         }
         
-        urlComponents.queryItems = [keyQueryItem, titleQueryItem]
+        urlComponents.queryItems = [keyQueryItem, titleQueryItem, pageQueryItem, adultQueryItem]
         
         guard let urlComponentsURL = urlComponents.url else {
             assert(false, "Failure load URL from \(urlComponents)")
             return nil
         }
-        
-        #if DEBUG
-        print(urlComponentsURL)
-        #endif
         
         request.url = urlComponentsURL
         request.httpMethod = HttpMethod.get

@@ -1,5 +1,5 @@
 //
-//  Url.swift
+//  Key.swift
 //  TMDB
 //
 //  Created by Seonghun Kim on 2020/01/05.
@@ -8,7 +8,6 @@
 
 import Foundation
 
-enum URL_Path {
-    static let api = "https://api.themoviedb.org/3"
-    static let image = "https://image.tmdb.org/t/p"
+enum Key {
+    static let v3 = "4bc2ec06a9147a9ec22006c62781781d"
 }
