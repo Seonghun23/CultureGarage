@@ -44,7 +44,7 @@ public struct MovieAPI {
     private func makeSearchRequest(with title: String, at page: Int) -> URLRequest? {
         guard !title.isEmpty else { return nil }
         
-        let urlString = URL_Path.api + Endpoint.search
+        let urlString = urlPath + Endpoint.search
         guard let url = URL(string: urlString) else {
             assert(false, urlString + "is not URL")
             return nil
@@ -55,7 +55,7 @@ public struct MovieAPI {
         let keyQueryItem = URLQueryItem(name: "api_key", value: apiKey)
         let titleQueryItem = URLQueryItem(name: "query", value: title)
         let pageQueryItem = URLQueryItem(name: "page", value: "\(page)")
-        let adultQueryItem = URLQueryItem(name: "page", value: "true")
+        let adultQueryItem = URLQueryItem(name: "include_adult", value: "true")
         
         guard let urlComponents = NSURLComponents(url: url, resolvingAgainstBaseURL: false) else {
             assert(false, "Failure create NSURLComponents from \(url)")

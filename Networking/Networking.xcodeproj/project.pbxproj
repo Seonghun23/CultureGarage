@@ -10,12 +10,9 @@
 		1450765023C0940900AAB507 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1450764623C0940900AAB507 /* Networking.framework */; };
 		1450765523C0940900AAB507 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1450765423C0940900AAB507 /* NetworkingTests.swift */; };
 		1450765723C0940900AAB507 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1450764923C0940900AAB507 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1450766523C0946900AAB507 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1450766423C0946900AAB507 /* RxSwift */; };
-		1450766723C0946900AAB507 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 1450766623C0946900AAB507 /* RxTest */; };
-		1450766923C0946900AAB507 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 1450766823C0946900AAB507 /* RxRelay */; };
-		1450766B23C0946900AAB507 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 1450766A23C0946900AAB507 /* RxCocoa */; };
-		1450766D23C0946900AAB507 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 1450766C23C0946900AAB507 /* RxBlocking */; };
 		1450767F23C098FC00AAB507 /* MovieAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1450767E23C098FC00AAB507 /* MovieAPI.swift */; };
+		148639DF23C2F0BA00E4F1BC /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 148639DE23C2F0BA00E4F1BC /* RxBlocking */; };
+		148639E123C2F0BA00E4F1BC /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 148639E023C2F0BA00E4F1BC /* RxTest */; };
 		148BC71023C1BFB2004B63CA /* TMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 148BC6FE23C0F046004B63CA /* TMDB.framework */; };
 		148BC71123C1BFB2004B63CA /* TMDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 148BC6FE23C0F046004B63CA /* TMDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		148BC72E23C1D9C3004B63CA /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148BC72D23C1D9C3004B63CA /* Network.swift */; };
@@ -85,11 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1450766B23C0946900AAB507 /* RxCocoa in Frameworks */,
-				1450766923C0946900AAB507 /* RxRelay in Frameworks */,
 				148BC71023C1BFB2004B63CA /* TMDB.framework in Frameworks */,
 				148BC73C23C1F0B1004B63CA /* RxAlamofire in Frameworks */,
-				1450766523C0946900AAB507 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,9 +91,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1450766723C0946900AAB507 /* RxTest in Frameworks */,
-				1450766D23C0946900AAB507 /* RxBlocking in Frameworks */,
 				1450765023C0940900AAB507 /* Networking.framework in Frameworks */,
+				148639E123C2F0BA00E4F1BC /* RxTest in Frameworks */,
+				148639DF23C2F0BA00E4F1BC /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,9 +222,6 @@
 			);
 			name = Networking;
 			packageProductDependencies = (
-				1450766423C0946900AAB507 /* RxSwift */,
-				1450766823C0946900AAB507 /* RxRelay */,
-				1450766A23C0946900AAB507 /* RxCocoa */,
 				148BC73B23C1F0B1004B63CA /* RxAlamofire */,
 			);
 			productName = Networking;
@@ -252,8 +243,8 @@
 			);
 			name = NetworkingTests;
 			packageProductDependencies = (
-				1450766623C0946900AAB507 /* RxTest */,
-				1450766C23C0946900AAB507 /* RxBlocking */,
+				148639DE23C2F0BA00E4F1BC /* RxBlocking */,
+				148639E023C2F0BA00E4F1BC /* RxTest */,
 			);
 			productName = NetworkingTests;
 			productReference = 1450764F23C0940900AAB507 /* NetworkingTests.xctest */;
@@ -288,8 +279,8 @@
 			);
 			mainGroup = 1450763C23C0940900AAB507;
 			packageReferences = (
-				1450766323C0946900AAB507 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				148BC73A23C1F0B1004B63CA /* XCRemoteSwiftPackageReference "RxAlamofire" */,
+				148639DD23C2F0BA00E4F1BC /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 1450764723C0940900AAB507 /* Products */;
 			projectDirPath = "";
@@ -620,7 +611,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1450766323C0946900AAB507 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		148639DD23C2F0BA00E4F1BC /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
 			requirement = {
@@ -639,30 +630,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1450766423C0946900AAB507 /* RxSwift */ = {
+		148639DE23C2F0BA00E4F1BC /* RxBlocking */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1450766323C0946900AAB507 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-		1450766623C0946900AAB507 /* RxTest */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1450766323C0946900AAB507 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxTest;
-		};
-		1450766823C0946900AAB507 /* RxRelay */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1450766323C0946900AAB507 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxRelay;
-		};
-		1450766A23C0946900AAB507 /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1450766323C0946900AAB507 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		1450766C23C0946900AAB507 /* RxBlocking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1450766323C0946900AAB507 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 148639DD23C2F0BA00E4F1BC /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxBlocking;
+		};
+		148639E023C2F0BA00E4F1BC /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 148639DD23C2F0BA00E4F1BC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
 		};
 		148BC73B23C1F0B1004B63CA /* RxAlamofire */ = {
 			isa = XCSwiftPackageProductDependency;

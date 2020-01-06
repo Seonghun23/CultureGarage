@@ -41,7 +41,7 @@ public struct ImageAPI {
     private func makeImageRequest(with path: String, size: Size) -> URLRequest? {
         guard !path.isEmpty else { return nil }
         
-        let urlString = URL_Path.image + size.endpoint + path
+        let urlString = urlPath + size.endpoint + path
         guard let url = URL(string: urlString) else {
             assert(false, urlString + "is not URL")
             return nil

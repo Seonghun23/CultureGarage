@@ -12,7 +12,7 @@ import XCTest
 
 class ImageAPITests: XCTestCase {
     private enum TestAPI {
-        static let path = "http://image.test.org/"
+        static let path = "http://image.test.org/t/p"
     }
     
     let api = ImageAPI(urlPath: TestAPI.path)
@@ -31,14 +31,14 @@ class ImageAPITests: XCTestCase {
         let originalRequest = api.getRequest(for: .original(imagePath))
         let originalUrlString = "http://image.test.org/t/p/original/test_path.jpg"
         
-        XCTAssertNil(originalRequest, "originalRequest is nil")
+        XCTAssertNotNil(originalRequest, "originalRequest is nil")
         XCTAssertEqual(originalRequest?.url?.absoluteString, originalUrlString, "originalRequest's URL is Wrong")
         XCTAssertEqual(originalRequest?.httpMethod, "GET", "originalRequest's HttpMethod is Wrong")
         
         let smallRequest = api.getRequest(for: .small(imagePath))
         let smallUrlString = "http://image.test.org/t/p/w500/test_path.jpg"
         
-        XCTAssertNil(smallRequest, "smallRequest is nil")
+        XCTAssertNotNil(smallRequest, "smallRequest is nil")
         XCTAssertEqual(smallRequest?.url?.absoluteString, smallUrlString, "smallRequest's URL is Wrong")
         XCTAssertEqual(smallRequest?.httpMethod, "GET", "smallRequest's HttpMethod is Wrong")
     }

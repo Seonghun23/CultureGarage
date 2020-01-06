@@ -7,12 +7,12 @@
 //
 
 import XCTest
-import Foundation
+
 @testable import TMDB
 
 class MovieAPITests: XCTestCase {
     private enum TestAPI {
-        static let path = "http://api.test.org/"
+        static let path = "http://api.test.org"
         static let key = "test_api_key"
     }
     
@@ -30,7 +30,12 @@ class MovieAPITests: XCTestCase {
     }
 
     func testGetRequest() {
-//        let request = api.getRequest(for: .search("Test_Title", 3))
+        let request = api.getRequest(for: .search("Test_Title", 3))
+        let urlString = "http://api.test.org/search/movie?api_key=test_api_key&query=Test_Title&page=3&include_adult=true"
+        
+        XCTAssertNotNil(request, "request is nil")
+        XCTAssertEqual(request?.url?.absoluteString, urlString, "request's URL is Wrong")
+        XCTAssertEqual(request?.httpMethod, "GET", "request's HttpMethod is Wrong")
     }
 
 }
