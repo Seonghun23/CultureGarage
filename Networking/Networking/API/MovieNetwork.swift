@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import TMDB
 import RxSwift
 
 public final class MovieNetwork {

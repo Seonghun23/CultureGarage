@@ -23,13 +23,8 @@ public struct MovieAPI {
     
     private let apiKey: String
     private let urlPath: String
-    
-    public init() {
-        self.apiKey = Key.v3
-        self.urlPath = URL_Path.api
-    }
-    
-    init(apiKey: String, urlPath: String) {
+
+    public init(apiKey: String, urlPath: String) {
         self.apiKey = apiKey
         self.urlPath = urlPath
     }

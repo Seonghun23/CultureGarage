@@ -21,11 +21,7 @@ public struct ImageAPI {
     
     private let urlPath: String
     
-    public init() {
-        self.urlPath = URL_Path.image
-    }
-    
-    init(urlPath: String) {
+    public init(urlPath: String) {
         self.urlPath = urlPath
     }
     

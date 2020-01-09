@@ -16,11 +16,6 @@ class MovieAPITests: XCTestCase {
         static let key = "test_api_key"
     }
     
-    private let api = MovieAPI(
-        apiKey: TestAPI.key,
-        urlPath: TestAPI.path
-    )
-
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -28,10 +23,36 @@ class MovieAPITests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    
+    func testInitURL() {
+        let rightApi = MovieAPI(
+            apiKey: TestAPI.key,
+            urlPath: "api.test.org"
+        )
+        
+        let rightRequest = rightApi.getRequest(for: .search("Test_URL", 1))
+        XCTAssertNotNil(rightRequest)
+        
+        let wrongApi = MovieAPI(
+            apiKey: TestAPI.key,
+            urlPath: "api.test.org/`"
+        )
+        
+        let wrongRequest = wrongApi.getRequest(for: .search("Test_URL", 1))
+        XCTAssertNil(wrongRequest, "Created wrongRequest with wrong URL")
+    }
 
     func testGetRequest() {
+        let api = MovieAPI(
+            apiKey: TestAPI.key,
+            urlPath: TestAPI.path
+        )
+        
+        let emptyTitleRequest = api.getRequest(for: .search("", 1))
+        XCTAssertNil(emptyTitleRequest, "request with empty title")
+        
         let request = api.getRequest(for: .search("Test_Title", 3))
-        let urlString = "http://api.test.org/search/movie?api_key=test_api_key&query=Test_Title&page=3&include_adult=true"
+        let urlString = TestAPI.path + "/search/movie?api_key=" + TestAPI.key + "&query=Test_Title&page=3&include_adult=true"
         
         XCTAssertNotNil(request, "request is nil")
         XCTAssertEqual(request?.url?.absoluteString, urlString, "request's URL is Wrong")
